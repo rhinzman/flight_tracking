@@ -18,9 +18,19 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "fast-csv": "^5.0.1",
+    "fs": "^0.0.1-security",
     "node-fetch": "^2.6.6",
     "nodemon": "^3.1.0",
-    "pg": "^8.11.4",
+    "pg": "^8.11.5",
     "request": "^2.88.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhinzman/flight_tracking.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rhinzman/flight_tracking/issues"
+  },
+  "homepage": "https://github.com/rhinzman/flight_tracking#readme"
 }
