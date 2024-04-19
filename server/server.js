@@ -7,6 +7,7 @@
 const PORT = 8000
 
 // Import Required Modules
+const {runQueries} = require('../server/database.js');
 const express = require("express")
 
 const app = express() 
@@ -15,7 +16,7 @@ const app = express()
 app.use(express.static('/var/www/html'))
 
 const cors = require("cors")
-
+app.use(cors());
 // Allow us to load environment variables from the .env file
 require("dotenv").config()
 
@@ -23,7 +24,9 @@ require("dotenv").config()
 const fetch = require("node-fetch")
 
 const request = require("request");
-const { response } = require("express")
+const { response } = require("express");
+
+
 
 
 // Get the API Key from an Environment Variable called: FLIGHTS_API_KEY
@@ -133,7 +136,7 @@ app.get('/flights/:airport_code', async (request, response) => {
           console.log(" +++++++++ calling runQueries() +++++++++++++++")
           
           // Used for lab 7
-          // runQueries(json)
+          runQueries(json)
 
           console.log(" +++++++++ completed runQueries() +++++++++++++++")
 
